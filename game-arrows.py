@@ -9,10 +9,7 @@ class GameArrows:
 		self.DIRECTIONS = {'left': (0, -1), 'right': (0, 1), 'up': (-1, 0), 'down': (1, 0)}
 
 	def create_field(self):
-		grid = []
-		for _ in range(self.SIZE):
-			line = [None for _ in range(self.SIZE)]
-			grid.append(line)
+		grid = [[None for _ in range(self.SIZE)] for _ in range(self.SIZE)]
 		return grid
 
 	def draw_field(self, grid):
@@ -111,7 +108,6 @@ class GameArrows:
 					continue
 
 				self.make_move(grid, row, col, direction)
-
 
 # Для запуска игры создайте экземпляр игры и вызовите метод start()
 
